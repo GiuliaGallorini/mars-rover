@@ -53,41 +53,97 @@ function turnRight() {
 
 function moveForward(){
   if (rover.direction === "N") {
-    rover.direction = "N";
-    console.log("Now rover is facing North");
+    // rover.x = x;
+    rover.y = y++;
+    console.log("Now rover is facing North, " + x + ", " + y);
   }
   else if (rover.direction === "E") {
-    rover.direction = "E";
-    console.log("Now rover is facing East");
+    rover.x = x++;
+    // rover.y = y;
+    console.log("Now rover is facing East, " + x + ", " + y);
   }
   else if (rover.direction === "S") {
-    rover.direction = "S";
-    console.log("Now rover is facing South");
+    // rover.x = x;
+    rover.y = y--;
+    console.log("Now rover is facing South, " + x + ", " + y);
   }
   else {
-    rover.direction = "W";
-    console.log("Now rover is facing West");
+    rover.x = x--;
+    // rover.y = y;
+    console.log("Now rover is facing West, " + x + ", " + y);
   }
   console.log("moveForward was called")
 }
 
+
+// // THE SAME WITH SWITCH STATEMENT BUT IT DOES NOT WORK
+// function turnLeft() {
+//   switch(turnLeft) {
+//     case "N":
+//       rover.direction = "W";
+//       console.log("Now Rover is facing West");
+//       break;
+//     case "W":
+//       rover.direction = "S";
+//       console.log("Now Rover is facing South");
+//       break;
+//     case "S":
+//       rover.direction = "E";
+//       console.log("Now Rover is facing East");
+//       break;
+//     case "E":
+//       rover.direction = "N";
+//       console.log("Now Rover is facing North");
+//       break;
+//   }
+// }
+
+// function turnRight() {
+//   switch(turnRight) {
+//     case "N":
+//       rover.direction = "E";
+//       console.log("Now Rover is facing East");
+//       break;
+//     case "W":
+//       rover.direction = "N";
+//       console.log("Now Rover is facing North");
+//       break;
+//     case "S":
+//       rover.direction = "W";
+//       console.log("Now Rover is facing West");
+//       break;
+//     case "E":
+//       rover.direction = "S";
+//       console.log("Now Rover is facing South");
+//       break;
+//   }
+// }
+
+// function moveForward() {
+//   switch(moveForward) {
+//     case "N":
+//       rover.direction = "N";
+//       console.log("Now Rover is facing North");
+//       break;
+//     case "W":
+//       rover.direction = "W";
+//       console.log("Now Rover is facing West");
+//       break;
+//     case "S":
+//       rover.direction = "S";
+//       console.log("Now Rover is facing South");
+//       break;
+//     case "E":
+//       rover.direction = "E";
+//       console.log("Now Rover is facing East");
+//       break;
+//   }
+// }
+
+
 turnLeft();
 turnRight();
 moveForward();
-
-// let roverDirection = "turnLeft";
-// function turnLeft2(direction)
-// switch(direction) {
-//   case "turnLeft":
-//     console.log("Now Rover is facing West")
-//     break;
-//   case "turnLeft":
-//     console.log("Now Rover is facing South")
-//     break;
-//   case "turnRight":
-//     console.log("Now Rover is facing East")
-//     break;
-// }
 
 var board = [
   [(0,0), (1,0), (2,0), (3,0), (4,0), (5,0), (6,0), (7,0), (8,0), (9,0)],
